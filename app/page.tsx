@@ -237,7 +237,7 @@ export default function Home() {
               )}
             </button>
             <a
-              href="https://www.linkedin.com/in/jesus-villalta"
+              href="https://www.linkedin.com/in/jesus-villalta-83368722b/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground text-background"
@@ -260,7 +260,7 @@ export default function Home() {
                   </a>
                 ))}
                 <a
-                  href="https://www.linkedin.com/in/jesus-villalta"
+                  href="https://www.linkedin.com/in/jesus-villalta-83368722b/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
@@ -522,7 +522,7 @@ export default function Home() {
                   <a href="#habilidades" className="footer-nav-link text-background/90 transition-colors hover:text-background">{t.footer.skills}</a>
                   <a href="#sobre-mi" className="footer-nav-link text-background/90 transition-colors hover:text-background">{t.footer.about}</a>
                   <a
-                    href="https://www.linkedin.com/in/jesus-villalta"
+                    href="https://www.linkedin.com/in/jesus-villalta-83368722b/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="footer-nav-link text-background/90 transition-colors hover:text-background"

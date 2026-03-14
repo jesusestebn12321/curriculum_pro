@@ -1,0 +1,3 @@
+# Nombre del secreto en GitHub (Settings → Secrets and variables → Actions)
+# Copia la línea de abajo al crear "New repository secret"
+FIREBASE_TOKEN
