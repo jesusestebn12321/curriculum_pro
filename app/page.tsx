@@ -15,9 +15,9 @@ const NAV_LINKS_BASE = [
 const SKILLS_KEYS = ["Backend", "Frontend", "Databases", "Tools"] as const;
 const SKILLS_ITEMS: Record<string, string[]> = {
   Backend: ["PHP (Laravel)", "Livewire", "RESTful APIs", "React.js", "Vue.js", "Express", "Selenium", "SOAP APIs", "Axios"],
-  Frontend: ["React.js", "Vue.js", "Tailwind", "Material Design", "Bootstrap", "HTML", "CSS", "SCSS", "WordPress"],
+  Frontend: ["React.js", "Vue.js", "AngularJS", "Tailwind", "SASS", "Material Design", "Bootstrap", "HTML", "CSS", "SCSS", "jQuery", "WordPress"],
   Databases: ["PostgreSQL", "MySQL", "MariaDB", "SQLite"],
-  Tools: ["AWS", "aaPanel", "Docker", "Git/GitHub", "Postman", "SCRUM", "Jira", "Trello"],
+  Tools: ["AWS", "Docker", "OpenAI API", "Groq API", "aaPanel", "cPanel", "Plesk", "HeidiSQL", "Cursor", "VS Code", "Git/GitHub", "Postman", "SCRUM", "Jira", "Trello"],
 };
 
 const TRANSLATIONS: Record<
@@ -52,12 +52,12 @@ const TRANSLATIONS: Record<
     },
     about: {
       title: "Soy Jesús Villalta.",
-      bio: "Desarrollador Fullstack que aprende construyendo y entrega con intención. Desde 2020 he ayudado a construir una marca travel-tech y proyectos en media, GovTech y SaaS. Automatizo procesos, optimizo sistemas y mejoro la experiencia de usuario—desde la conceptualización hasta el mantenimiento.",
+      bio: "Ingeniero de Software con más de 5 años de experiencia diseñando y escalando sistemas web para mercados en Europa y América Latina. Especialista en PHP, Python y ecosistemas React, con capacidad para liderar el ciclo completo de desarrollo. Enfocado en automatización de procesos, optimización de sistemas complejos y mejora de UX. Ingeniero en Sistemas (UNERG, 2020). Español nativo · Inglés A2.",
       aboutMe: "Sobre mí",
       stats: [
-        { value: "4+", label: "años", desc: "Construyendo sistemas web escalables para empresas en Europa y América Latina." },
-        { value: "3", label: "empresas", desc: "Desde media y GovTech hasta travel tech. Fullstack de punta a punta." },
-        { value: "20+", label: "tecnologías", desc: "Laravel, React, Python, Django, bases de datos y herramientas de DevOps." },
+        { value: "5+", label: "años", desc: "Diseñando y escalando sistemas web para empresas en Europa y América Latina." },
+        { value: "5+", label: "proyectos", desc: "Desde SaaS fiscal y facturación hasta legal tech, media y GovTech." },
+        { value: "25+", label: "tecnologías", desc: "Laravel, Vue, React, Python, Django, IA, Stripe, Docker y bases de datos." },
       ],
     },
     experience: {
@@ -67,9 +67,11 @@ const TRANSLATIONS: Record<
       projectType: "Tipo de proyecto",
       viewDetails: "Ver detalles",
       jobs: [
-        { company: "Maidan Holding", location: "España (Remoto)", role: "Fullstack Engineer", period: "Feb 2021 – Presente", type: "Media & Automatización", summary: "Diseñé y desarrollé aplicaciones desde cero para automatización de publicaciones masivas, APIs REST, CRM automatizado y herramientas de web scraping que redujeron el esfuerzo manual en más de un 80%.", points: ["Aplicación para automatización de publicaciones en periódicos con API REST.", "Herramientas de análisis y automatización con Selenium/Dusk (reducción 80% esfuerzo manual).", "Optimización de queries y bases de datos; mejoras significativas de rendimiento.", "CRM automatizado para captación de leads.", "Gestión de servidores Linux (aaPanel). Refactorización de UIs modernas."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, Selenium, Plesk, WordPress." },
-        { company: "Sigma", location: "Venezuela (Remoto)", role: "Fullstack Engineer", period: "Ago 2020 - Ene 2021", type: "GovTech / Nómina", summary: "Sistema completo para gestión de obras públicas y pagos de nómina con Django. Frontend con Bootstrap, generación automática de PDFs y pruebas unitarias e integración.", points: ["Sistema de gestión de obras públicas y nómina con Django y Python.", "Frontend con Bootstrap y componentes personalizados.", "Automatización de documentos PDF. Bases de datos normalizadas.", "Pruebas unitarias y de integración con mocks."], stack: "Django, Python, Bootstrap, PostgreSQL, Mock." },
-        { company: "Qatuntravel", location: "Perú (Remoto)", role: "Fullstack Developer", period: "Ene 2020 - Jul 2020", type: "Travel Tech", summary: "Módulos de reservas en tiempo real que redujeron errores en +60%. Flujos de compra que aceleraron la conversión. Refactorización que redujo tiempos de respuesta hasta 40% bajo alta demanda.", points: ["Reservas en tiempo real; reducción 60% errores y tiempo de gestión.", "Flujos de compra eficientes; mayor tasa de reserva.", "Refactorización SQL y componentes; -40% tiempos de respuesta.", "Soporte multi-país (moneda, zonas horarias). Panel administrativo centralizado."], stack: "Laravel, React.js, JavaScript, MariaDB." },
+        { company: "Notario.org", location: "España (Remoto)", role: "Fullstack Engineer", period: "Abr 2024 – Presente", type: "Legal Tech / CRM", summary: "Desarrollo integral de un CRM empresarial de alto rendimiento con Laravel y MariaDB, optimizando flujos de trabajo complejos mediante componentes reactivos en Vue.js y React.js.", points: ["CRM empresarial con Laravel y MariaDB; flujos complejos con Vue.js y React.js.", "Facturación automatizada y suscripciones con Stripe; control centralizado de pagos.", "Integración de Groq para analítica avanzada y extracción de métricas en lenguaje natural.", "APIs de terceros (Vintegrid, Diabolocom) y administración de servidores Linux con aaPanel."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, aaPanel, Stripe." },
+        { company: "Invoice Nexusdevtech", location: "Freelancer (Remoto)", role: "Fullstack Developer", period: "Ene 2026", type: "SaaS / Facturación e inventario", summary: "Plataforma SaaS de facturación, inventario y ventas. Arquitectura multiempresa con Laravel y Vue 3 SPA, aislamiento por tenant, roles granulares y portal de clientes.", points: ["Arquitectura multiempresa (Laravel + Vue 3 SPA) con Bouncer, Sanctum y portal de clientes.", "Inventario transaccional vinculado a facturación y módulo POS con carrito, multimoneda y emisión fiscal.", "Catálogo público configurable con PDF de códigos QR; landing bilingüe con suscripciones Stripe.", "Despliegue Docker multi-etapa, Gotenberg, S3/Dropbox, colas, backups Spatie y tests con Pest."], stack: "Laravel, PHP 8.5, Vue 3, Pinia, TypeScript, Tailwind CSS v4, MariaDB/SQLite, Docker Compose, Redis, Sanctum, Bouncer, Stripe, Gotenberg, Vite, Pest." },
+        { company: "TaxDay", location: "Freelancer (Remoto)", role: "Fullstack Engineer", period: "Dic 2025", type: "SaaS / Cumplimiento fiscal", summary: "SaaS de residencia fiscal. Reimplementación en Laravel 12 con arquitectura de dominio, UI Livewire 3 / Volt / Flux y modelo multi-año con varias residencias por ejercicio.", points: ["Motor de scoring de riesgo auditable: calendario 365 días, cobertura de estancias, umbrales por país e informes PDF.", "Stripe y AWS S3: suscripciones con webhooks, almacenamiento privado y sincronización de planes.", "Asistente IA (Groq) con datos fiscales del usuario, colas asíncronas y exportaciones GDPR en background.", "2FA, roles Spatie, impersonación trazable y tests Pest en billing, storage, IA y exportaciones."], stack: "PHP 8.3, Laravel 12, Livewire 3, Volt, Flux UI, Fortify, Spatie Permission, Stripe, AWS S3, Groq API, DomPDF, Tailwind CSS 4, Vite, Pest, SweetAlert2." },
+        { company: "Maidan Holding", location: "España (Remoto)", role: "Fullstack Engineer", period: "Feb 2021 – Abr 2024", type: "Media & Automatización", summary: "Automatización de publicaciones, integración de IA y herramientas de scraping que redujeron tareas manuales en un 80%, junto con CRM a medida y optimización de backend.", points: ["Integración de OpenAI para traducción multilingüe, moderación de comentarios y asistencia en redacción.", "Automatización con Selenium/Dusk; reducción del 80% en tareas manuales.", "Refactorización de queries y bases de datos; mejora significativa de tiempos de respuesta.", "CRM automatizado para generación y gestión de leads; incremento de tasas de conversión."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, Selenium (Dusk), Plesk, WordPress, aaPanel, Stripe." },
+        { company: "Sigma", location: "Venezuela (Remoto)", role: "Fullstack Engineer", period: "Ago 2020 – Jul 2021", type: "GovTech / Nómina", summary: "Sistema integral para gestión de obras públicas y procesamiento de nóminas con Django y Python, con frontend Bootstrap, PDFs automatizados y pruebas unitarias e integración.", points: ["Sistema de obras públicas y nóminas con Django y Python.", "Frontend con Bootstrap y componentes personalizados.", "Generación de PDFs con plantillas reutilizables y paquetes internos de Python.", "Bases de datos normalizadas y pruebas unitarias/de integración con mocks."], stack: "Django, Python, Bootstrap, PostgreSQL, jQuery, Mock." },
       ],
     },
     skills: {
@@ -78,7 +80,7 @@ const TRANSLATIONS: Record<
       categories: { Backend: "Backend", Frontend: "Frontend", Databases: "Bases de datos", Tools: "Herramientas" },
     },
     footer: {
-      role: "Desarrollador Fullstack",
+      role: "Software Developer & Fullstack Engineer",
       cta: "¿Listo para crear con propósito?",
       ctaDesc: "Si buscas un desarrollador que escucha, entiende el negocio y construye con intención, iniciemos la conversación.",
       letsTalk: "Hablemos",
@@ -110,12 +112,12 @@ const TRANSLATIONS: Record<
     },
     about: {
       title: "I'm Jesús Villalta.",
-      bio: "Fullstack developer who learns by building and delivers with intent. Since 2020 I've helped build a travel-tech brand and projects in media, GovTech, and SaaS. I automate processes, optimize systems, and improve user experience—from concept to maintenance.",
+      bio: "Software Engineer with 5+ years designing and scaling web systems for European and Latin American markets. Specialist in PHP, Python, and React ecosystems, leading the full development lifecycle. Focused on process automation, complex system optimization, and UX. Systems Engineer (UNERG, 2020). Native Spanish · English A2.",
       aboutMe: "About me",
       stats: [
-        { value: "4+", label: "years", desc: "Building scalable web systems for companies in Europe and Latin America." },
-        { value: "3", label: "companies", desc: "From media and GovTech to travel tech. Fullstack end to end." },
-        { value: "20+", label: "technologies", desc: "Laravel, React, Python, Django, databases and DevOps tools." },
+        { value: "5+", label: "years", desc: "Designing and scaling web systems for companies in Europe and Latin America." },
+        { value: "5+", label: "projects", desc: "From fiscal and billing SaaS to legal tech, media, and GovTech." },
+        { value: "25+", label: "technologies", desc: "Laravel, Vue, React, Python, Django, AI, Stripe, Docker, and databases." },
       ],
     },
     experience: {
@@ -125,9 +127,11 @@ const TRANSLATIONS: Record<
       projectType: "Project type",
       viewDetails: "View details",
       jobs: [
-        { company: "Maidan Holding", location: "Spain (Remote)", role: "Fullstack Engineer", period: "Feb 2021 – Present", type: "Media & Automation", summary: "Designed and built applications from scratch for mass publication automation, custom REST APIs, automated CRM and web scraping tools that cut manual effort by over 80%.", points: ["Application for newspaper publication automation with REST API.", "Analysis and automation tools with Selenium/Dusk (80% manual effort reduction).", "Query and database optimization; significant performance gains.", "Automated CRM for lead generation.", "Linux server management (aaPanel). Modern UI refactoring."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, Selenium, Plesk, WordPress." },
-        { company: "Sigma", location: "Venezuela (Remote)", role: "Fullstack Engineer", period: "Aug 2020 - Jan 2021", type: "GovTech / Payroll", summary: "Full system for public works and payroll management with Django. Bootstrap frontend, automated PDF generation and unit/integration testing.", points: ["Public works and payroll management system with Django and Python.", "Bootstrap frontend and custom components.", "Automated PDF documents. Normalized databases.", "Unit and integration tests with mocks."], stack: "Django, Python, Bootstrap, PostgreSQL, Mock." },
-        { company: "Qatuntravel", location: "Peru (Remote)", role: "Fullstack Developer", period: "Jan 2020 - Jul 2020", type: "Travel Tech", summary: "Real-time booking modules that cut errors by 60%+. Checkout flows that boosted conversion. Refactoring that reduced response times by up to 40% under load.", points: ["Real-time bookings; 60% fewer errors and handling time.", "Efficient checkout flows; higher booking rate.", "SQL and component refactoring; -40% response times.", "Multi-country support (currency, timezones). Centralized admin panel."], stack: "Laravel, React.js, JavaScript, MariaDB." },
+        { company: "Notario.org", location: "Spain (Remote)", role: "Fullstack Engineer", period: "Apr 2024 – Present", type: "Legal Tech / CRM", summary: "End-to-end development of a high-performance business CRM with Laravel and MariaDB, optimizing complex workflows through reactive Vue.js and React.js components.", points: ["Business CRM with Laravel and MariaDB; complex flows with Vue.js and React.js.", "Automated billing and Stripe subscriptions; centralized payment control.", "Groq integration for advanced analytics and natural-language metric extraction.", "Third-party APIs (Vintegrid, Diabolocom) and Linux server administration with aaPanel."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, aaPanel, Stripe." },
+        { company: "Invoice Nexusdevtech", location: "Freelancer (Remote)", role: "Fullstack Developer", period: "Jan 2026", type: "SaaS / Billing & inventory", summary: "SaaS platform for billing, inventory, and sales. Multi-company architecture with Laravel and Vue 3 SPA, tenant isolation, granular roles, and a client portal.", points: ["Multi-company architecture (Laravel + Vue 3 SPA) with Bouncer, Sanctum, and client portal.", "Transactional inventory tied to billing and POS module with cart, multi-currency, and fiscal issuance.", "Configurable public catalog with QR PDFs; bilingual landing with Stripe subscriptions.", "Multi-stage Docker deployment, Gotenberg, S3/Dropbox, queues, Spatie backups, and Pest tests."], stack: "Laravel, PHP 8.5, Vue 3, Pinia, TypeScript, Tailwind CSS v4, MariaDB/SQLite, Docker Compose, Redis, Sanctum, Bouncer, Stripe, Gotenberg, Vite, Pest." },
+        { company: "TaxDay", location: "Freelancer (Remote)", role: "Fullstack Engineer", period: "Dec 2025", type: "SaaS / Fiscal residence compliance", summary: "Fiscal residence SaaS. Rebuilt on Laravel 12 with domain architecture, Livewire 3 / Volt / Flux UI, and a multi-year model with multiple residencies per tax year.", points: ["Auditable risk scoring: 365-day calendar, stay coverage, per-country thresholds, and PDF reports.", "Stripe and AWS S3: webhook subscriptions, private storage, and plan sync.", "Groq AI assistant with user tax data, async queues, and GDPR exports in the background.", "2FA, Spatie roles, traceable impersonation, and Pest tests for billing, storage, AI, and exports."], stack: "PHP 8.3, Laravel 12, Livewire 3, Volt, Flux UI, Fortify, Spatie Permission, Stripe, AWS S3, Groq API, DomPDF, Tailwind CSS 4, Vite, Pest, SweetAlert2." },
+        { company: "Maidan Holding", location: "Spain (Remote)", role: "Fullstack Engineer", period: "Feb 2021 – Apr 2024", type: "Media & Automation", summary: "Publication automation, AI integration, and scraping tools that cut manual tasks by 80%, plus custom CRM and backend optimization.", points: ["OpenAI integration for multilingual translation, comment moderation, and writing assistance.", "Selenium/Dusk automation; 80% reduction in manual tasks.", "Query and database refactoring; significant response time improvements.", "Automated CRM for lead generation and management; higher conversion rates."], stack: "Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, Selenium (Dusk), Plesk, WordPress, aaPanel, Stripe." },
+        { company: "Sigma", location: "Venezuela (Remote)", role: "Fullstack Engineer", period: "Aug 2020 – Jul 2021", type: "GovTech / Payroll", summary: "Full system for public works and payroll processing with Django and Python, Bootstrap frontend, automated PDFs, and unit/integration testing.", points: ["Public works and payroll system with Django and Python.", "Bootstrap frontend and custom components.", "PDF generation with reusable templates and internal Python packages.", "Normalized databases and unit/integration tests with mocks."], stack: "Django, Python, Bootstrap, PostgreSQL, jQuery, Mock." },
       ],
     },
     skills: {
@@ -136,7 +140,7 @@ const TRANSLATIONS: Record<
       categories: { Backend: "Backend", Frontend: "Frontend", Databases: "Databases", Tools: "Tools" },
     },
     footer: {
-      role: "Fullstack Developer",
+      role: "Software Developer & Fullstack Engineer",
       cta: "Ready to create with purpose?",
       ctaDesc: "If you're looking for a developer who listens, understands the business and builds with intention, let's start the conversation.",
       letsTalk: "Let's talk",

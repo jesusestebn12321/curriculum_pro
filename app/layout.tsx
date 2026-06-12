@@ -9,12 +9,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jesús Villalta | Desarrollador Fullstack",
+  title: "Jesús Villalta | Software Developer & Fullstack Engineer",
   description:
-    "Desarrollador Fullstack con más de 4 años de experiencia. Especializado en PHP, Python y React.js. Automatización, optimización de sistemas y experiencia de usuario.",
-  keywords: ["Fullstack", "Laravel", "React", "Python", "Desarrollador", "Venezuela"],
+    "Ingeniero de Software con más de 5 años de experiencia. Especializado en PHP, Python y React.js. SaaS, automatización, IA y sistemas escalables para Europa y América Latina.",
+  keywords: ["Fullstack", "Laravel", "React", "Python", "SaaS", "Stripe", "Desarrollador", "Venezuela"],
   openGraph: {
-    title: "Jesús Villalta | Desarrollador Fullstack",
+    title: "Jesús Villalta | Software Developer & Fullstack Engineer",
     description: "Portafolio profesional — Sistemas web escalables para Europa y América Latina.",
   },
 };
