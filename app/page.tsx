@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { HeroScene } from "./components/HeroScene";
 
 type Locale = "es" | "en";
 
 const NAV_LINKS_BASE = [
-  { href: "#", icon: "home" as const },
+  { href: "#sobre-mi", icon: "user" as const },
   { href: "#experiencia", icon: "briefcase" as const },
   { href: "#habilidades", icon: "code" as const },
-  { href: "#sobre-mi", icon: "user" as const },
+  { href: "#contacto", icon: "doc" as const },
 ];
 
 const SKILLS_KEYS = ["Backend", "Frontend", "Databases", "Tools"] as const;
@@ -26,19 +27,23 @@ const TRANSLATIONS: Record<
     nav: string[];
     menu: string;
     menuClose: string;
-    hero: { at: string; headlineStart: string; products: string; headlineMid: string; systems: string; headlineEnd: string; pills: string[]; subtitle: string; letsTalk: string; sendEmail: string; downloadCv: string };
-    about: { title: string; bio: string; aboutMe: string; stats: { value: string; label: string; desc: string }[] };
+    header: { ctaDownload: string };
+    hero: { at: string; headlineStart: string; products: string; headlineMid: string; systems: string; headlineEnd: string; pills: string[]; subtitle: string; subtitleSecondary: string; letsTalk: string; sendEmail: string; downloadCv: string; exploreExperience: string };
+    about: { title: string; bio: string; aboutMe: string; stats: { value: string; label: string; desc: string; bar: number }[] };
     experience: { tag: string; viewAll: string; title: string; projectType: string; viewDetails: string; jobs: { company: string; location: string; role: string; period: string; type: string; summary: string; points: string[]; stack: string }[] };
     skills: { tag: string; title: string; categories: Record<string, string> };
     footer: { role: string; cta: string; ctaDesc: string; letsTalk: string; sendEmail: string; nav: string; home: string; experience: string; skills: string; about: string; copyright: string };
   }
 > = {
   es: {
-    nav: ["Inicio", "Experiencia", "Habilidades", "Sobre mí"],
+    nav: ["Sobre mí", "Experiencia", "Habilidades", "Contacto"],
     menu: "Menú",
     menuClose: "Cerrar menú",
+    header: {
+      ctaDownload: "Descargar CV",
+    },
     hero: {
-      at: "Fullstack at",
+      at: "Fullstack · Software Engineer",
       headlineStart: "Diseñando ",
       products: "productos",
       headlineMid: " que la gente usa, y ",
@@ -46,18 +51,20 @@ const TRANSLATIONS: Record<
       headlineEnd: " en los que los equipos confían.",
       pills: ["Desarrollo Fullstack", "APIs y Sistemas", "Experiencia de usuario"],
       subtitle: "Combinando sentido de negocio y claridad técnica para crear soluciones que impulsan el crecimiento y deleitan a los usuarios.",
+      subtitleSecondary: "De la conceptualización al despliegue, construidos para rendir en producción.",
       letsTalk: "Hablemos",
       sendEmail: "Enviar email",
       downloadCv: "Descargar CV",
+      exploreExperience: "Ver experiencia",
     },
     about: {
       title: "Soy Jesús Villalta.",
       bio: "Ingeniero de Software con más de 5 años de experiencia diseñando y escalando sistemas web para mercados en Europa y América Latina. Especialista en PHP, Python y ecosistemas React, con capacidad para liderar el ciclo completo de desarrollo. Enfocado en automatización de procesos, optimización de sistemas complejos y mejora de UX. Ingeniero en Sistemas (UNERG, 2020). Español nativo · Inglés A2.",
       aboutMe: "Sobre mí",
       stats: [
-        { value: "5+", label: "años", desc: "Diseñando y escalando sistemas web para empresas en Europa y América Latina." },
-        { value: "6+", label: "proyectos", desc: "Desde SaaS fiscal, facturación y WhatsApp hasta legal tech, media y GovTech." },
-        { value: "25+", label: "tecnologías", desc: "Laravel, Vue, React, Python, Django, IA, Stripe, Docker y bases de datos." },
+        { value: "5+", label: "años", desc: "Diseñando y escalando sistemas web para empresas en Europa y América Latina.", bar: 88 },
+        { value: "6+", label: "proyectos", desc: "Desde SaaS fiscal, facturación y WhatsApp hasta legal tech, media y GovTech.", bar: 76 },
+        { value: "25+", label: "tecnologías", desc: "Laravel, Vue, React, Python, Django, IA, Stripe, Docker y bases de datos.", bar: 94 },
       ],
     },
     experience: {
@@ -95,11 +102,14 @@ const TRANSLATIONS: Record<
     },
   },
   en: {
-    nav: ["Home", "Experience", "Skills", "About me"],
+    nav: ["About me", "Experience", "Skills", "Contact"],
     menu: "Menu",
     menuClose: "Close menu",
+    header: {
+      ctaDownload: "Download CV",
+    },
     hero: {
-      at: "Fullstack at",
+      at: "Fullstack · Software Engineer",
       headlineStart: "Designing ",
       products: "products",
       headlineMid: " people love, and ",
@@ -107,18 +117,20 @@ const TRANSLATIONS: Record<
       headlineEnd: " teams rely on.",
       pills: ["Fullstack Development", "APIs & Systems", "User Experience"],
       subtitle: "Merging business sense and technical clarity to build solutions that drive growth and delight users.",
+      subtitleSecondary: "From concept to deployment, built to perform in production.",
       letsTalk: "Let's talk",
       sendEmail: "Email me",
       downloadCv: "Download CV",
+      exploreExperience: "View experience",
     },
     about: {
       title: "I'm Jesús Villalta.",
       bio: "Software Engineer with 5+ years designing and scaling web systems for European and Latin American markets. Specialist in PHP, Python, and React ecosystems, leading the full development lifecycle. Focused on process automation, complex system optimization, and UX. Systems Engineer (UNERG, 2020). Native Spanish · English A2.",
       aboutMe: "About me",
       stats: [
-        { value: "5+", label: "years", desc: "Designing and scaling web systems for companies in Europe and Latin America." },
-        { value: "6+", label: "projects", desc: "From fiscal, billing, and WhatsApp SaaS to legal tech, media, and GovTech." },
-        { value: "25+", label: "technologies", desc: "Laravel, Vue, React, Python, Django, AI, Stripe, Docker, and databases." },
+        { value: "5+", label: "years", desc: "Designing and scaling web systems for companies in Europe and Latin America.", bar: 88 },
+        { value: "6+", label: "projects", desc: "From fiscal, billing, and WhatsApp SaaS to legal tech, media, and GovTech.", bar: 76 },
+        { value: "25+", label: "technologies", desc: "Laravel, Vue, React, Python, Django, AI, Stripe, Docker, and databases.", bar: 94 },
       ],
     },
     experience: {
@@ -174,9 +186,37 @@ function useInView() {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileNav, setMobileNav] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+  );
   const [locale, setLocale] = useState<Locale>("es");
   const t = TRANSLATIONS[locale];
   useInView();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", menuOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const desktopNav = window.matchMedia("(min-width: 768px)");
+    const syncNavMode = () => {
+      const isMobile = !desktopNav.matches;
+      setMobileNav(isMobile);
+      if (!isMobile) setMenuOpen(false);
+    };
+    syncNavMode();
+    desktopNav.addEventListener("change", syncNavMode);
+    return () => desktopNav.removeEventListener("change", syncNavMode);
+  }, []);
 
   const Icon = ({ name }: { name: string }) => {
     const c = "w-5 h-5 shrink-0 text-muted";
@@ -194,152 +234,207 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header: avatar + nombre | Menu + Plus */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#" className="flex items-center gap-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
-            <Image
-              src="/jesus_villalta.png"
-              alt="Jesús Villalta"
-              width={40}
-              height={40}
-              className="h-9 w-9 rounded-full object-cover"
-              priority
-            />
-            <span className="text-lg font-semibold tracking-tight text-foreground">
-              Jesús Villalta
-            </span>
-          </a>
-          <div className="relative flex items-center gap-3">
-            <div className="flex rounded-full border border-border bg-card p-0.5 text-sm font-medium">
-              <button
-                type="button"
-                onClick={() => setLocale("es")}
-                className={`rounded-full px-3 py-1.5 transition-colors ${locale === "es" ? "bg-foreground text-background" : "text-muted hover:text-foreground"}`}
-                aria-label="Español"
-              >
-                ES
-              </button>
-              <button
-                type="button"
-                onClick={() => setLocale("en")}
-                className={`rounded-full px-3 py-1.5 transition-colors ${locale === "en" ? "bg-foreground text-background" : "text-muted hover:text-foreground"}`}
-                aria-label="English"
-              >
-                EN
-              </button>
-            </div>
-            <button
-              type="button"
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background"
-              aria-label={menuOpen ? t.menuClose : t.menu}
-            >
-              <span>{t.menu}</span>
-              {menuOpen ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-              )}
-            </button>
+      <header className="site-header-shell fixed top-0 left-0 right-0 z-50">
+        <div className="nav-pill-wrapper px-4 pb-3 pt-3 lg:px-8 lg:pb-4 lg:pt-4">
+          <nav
+            className={`nav-pill mx-auto max-w-6xl${scrolled ? " nav-pill--scrolled" : ""}${menuOpen && mobileNav ? " nav-pill--menu-open" : ""}`}
+            aria-label="Principal"
+          >
             <a
-              href="https://www.linkedin.com/in/jesus-villalta-83368722b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground text-background"
-              aria-label="LinkedIn"
+              href="#"
+              className="nav-pill-brand flex shrink-0 items-center gap-2.5 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:gap-3"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span className="nav-pill-brand-icon relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl sm:h-10 sm:w-10">
+                <Image
+                  src="/jesus_villalta.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </span>
+              <span className="hidden text-sm font-bold tracking-tight text-foreground sm:inline lg:text-base">
+                Jesús Villalta
+              </span>
             </a>
-            {/* Dropdown menú con iconos */}
-            {menuOpen && (
-              <div className="absolute right-0 top-full z-50 mt-2 w-56 rounded-2xl border border-border bg-card py-3 shadow-lg">
-                {NAV_LINKS_BASE.map((link, i) => (
-                  <a
-                    key={link.href + i}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="nav-link-effect flex items-center gap-3 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-background"
-                  >
-                    <Icon name={link.icon} />
+
+            <ul className="nav-pill-links hidden md:flex">
+              {NAV_LINKS_BASE.map((link, i) => (
+                <li key={link.href + i}>
+                  <a href={link.href} className="nav-pill-link">
                     {t.nav[i]}
                   </a>
-                ))}
-                <a
-                  href="https://www.linkedin.com/in/jesus-villalta-83368722b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMenuOpen(false)}
-                  className="nav-link-effect flex items-center gap-3 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-background"
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="nav-lang-switch hidden sm:flex" role="group" aria-label="Idioma">
+                <button
+                  type="button"
+                  onClick={() => setLocale("es")}
+                  className={`nav-lang-btn${locale === "es" ? " nav-lang-btn--active" : ""}`}
+                  aria-label="Español"
+                  aria-pressed={locale === "es"}
                 >
-                  <svg className="w-5 h-5 shrink-0 text-muted" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  LinkedIn
-                </a>
+                  ES
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLocale("en")}
+                  className={`nav-lang-btn${locale === "en" ? " nav-lang-btn--active" : ""}`}
+                  aria-label="English"
+                  aria-pressed={locale === "en"}
+                >
+                  EN
+                </button>
               </div>
-            )}
-          </div>
-        </nav>
+
+              <a href="#contacto" className="nav-pill-secondary hidden md:inline-flex">
+                {t.hero.letsTalk}
+              </a>
+
+              <a
+                href="/jesus-villalta-cv.pdf"
+                download={locale === "es" ? "Jesús-Villalta-CV.pdf" : "Jesus-Villalta-CV.pdf"}
+                className="nav-pill-cta nav-pill-cta--desktop hidden md:inline-flex items-center gap-1.5"
+              >
+                <DownloadIcon />
+                {t.header.ctaDownload}
+              </a>
+
+              <button
+                type="button"
+                onClick={() => setMenuOpen((open) => !open)}
+                className="nav-hamburger nav-hamburger--mobile"
+                aria-label={menuOpen ? t.menuClose : t.menu}
+                aria-expanded={menuOpen ? "true" : "false"}
+              >
+                <span className={`nav-hamburger-line${menuOpen ? " nav-hamburger-line--top-open" : ""}`} />
+                <span className={`nav-hamburger-line${menuOpen ? " nav-hamburger-line--mid-open" : ""}`} />
+                <span className={`nav-hamburger-line${menuOpen ? " nav-hamburger-line--bot-open" : ""}`} />
+              </button>
+            </div>
+          </nav>
+
+          {mobileNav && menuOpen && (
+            <>
+              <button
+                type="button"
+                className="nav-mobile-backdrop"
+                aria-label={t.menuClose}
+                onClick={() => setMenuOpen(false)}
+              />
+              <div className="nav-pill-mobile-menu mx-auto max-w-6xl">
+                <nav className="flex flex-col gap-1 p-3">
+                  {NAV_LINKS_BASE.map((link, i) => (
+                    <a
+                      key={link.href + i}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="nav-pill-mobile-link flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium"
+                    >
+                      <Icon name={link.icon} />
+                      {t.nav[i]}
+                    </a>
+                  ))}
+                </nav>
+                <div className="border-t border-border/50 p-3">
+                  <div className="nav-lang-switch mb-3 w-fit">
+                    <button
+                      type="button"
+                      onClick={() => setLocale("es")}
+                      className={`nav-lang-btn${locale === "es" ? " nav-lang-btn--active" : ""}`}
+                      aria-pressed={locale === "es"}
+                    >
+                      ES
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setLocale("en")}
+                      className={`nav-lang-btn${locale === "en" ? " nav-lang-btn--active" : ""}`}
+                      aria-pressed={locale === "en"}
+                    >
+                      EN
+                    </button>
+                  </div>
+                  <a
+                    href="/jesus-villalta-cv.pdf"
+                    download={locale === "es" ? "Jesús-Villalta-CV.pdf" : "Jesus-Villalta-CV.pdf"}
+                    onClick={() => setMenuOpen(false)}
+                    className="nav-pill-cta mb-2 inline-flex w-full items-center justify-center gap-2"
+                  >
+                    <DownloadIcon />
+                    {t.header.ctaDownload}
+                  </a>
+                  <a
+                    href="#contacto"
+                    onClick={() => setMenuOpen(false)}
+                    className="nav-pill-secondary inline-flex w-full items-center justify-center rounded-full py-3"
+                  >
+                    {t.hero.letsTalk}
+                  </a>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </header>
 
-      <main>
-        {/* Hero - fondo 3D + blobs + headline */}
-        <section className="hero-stripes relative min-h-[85vh] overflow-hidden px-6 pt-28 pb-20 lg:px-8" data-animate>
-          {/* Fondo 3D: cubo grande detrás del contenido */}
-          <div className="hero-3d-bg" aria-hidden>
-            <div className="hero-3d-cube">
-              <div className="hero-3d-face front" />
-              <div className="hero-3d-face back" />
-              <div className="hero-3d-face right" />
-              <div className="hero-3d-face left" />
-              <div className="hero-3d-face top" />
-              <div className="hero-3d-face bottom" />
-            </div>
-          </div>
-          {/* Blobs de gradiente (rojo-rosa + teal) */}
-          <div className="hero-blob hero-blob-1" aria-hidden />
-          <div className="hero-blob hero-blob-2" aria-hidden />
-          <div className="hero-blob hero-blob-3" aria-hidden />
-          <div className="relative z-10 mx-auto max-w-4xl">
-            <div className="mb-6 flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-pill px-4 py-1.5 text-sm font-medium text-pill-text">
+      <main className="pt-[5.5rem] lg:pt-24">
+        <section className="hero-section hero-section--clarika relative overflow-hidden bg-white px-6 pb-24 pt-6 text-foreground lg:px-8 lg:pb-28 lg:pt-10" data-animate>
+          <HeroScene />
+          <div className="hero-content relative z-10 mx-auto flex min-h-[min(78vh,760px)] max-w-3xl flex-col items-center justify-center text-center text-foreground lg:max-w-4xl">
+            <div className="mb-6 flex flex-wrap items-center justify-center gap-2 lg:mb-7">
+              <span className="hero-eyebrow-clarika inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em]">
+                <span className="hero-eyebrow-dot" aria-hidden>●</span>
                 {t.hero.at}
               </span>
             </div>
-            <h1 className="hero-headline mb-8 font-bold leading-[1.1] tracking-tight">
-              <span className="text-foreground">{t.hero.headlineStart}</span>
-              <span className="hero-word-accent text-[#e11d48]">{t.hero.products}</span>
-              <span className="text-foreground">{t.hero.headlineMid}</span>
-              <span className="hero-word-accent text-[#ea580c]">{t.hero.systems}</span>
-              <span className="text-foreground">{t.hero.headlineEnd}</span>
+            <h1 className="hero-headline hero-headline-clarika mb-6 max-w-4xl font-bold tracking-tight text-foreground lg:mb-7">
+              <span className="hero-headline-line block text-foreground">
+                {t.hero.headlineStart}
+                <span className="hero-word-accent hero-word-accent--rose">{t.hero.products}</span>
+                {locale === "es" ? " que la gente usa," : " people love,"}
+              </span>
+              <span className="hero-headline-highlight mt-3 inline-block">
+                {locale === "es" ? "y " : "and "}
+                <span className="hero-word-accent hero-word-accent--orange">{t.hero.systems}</span>
+                {t.hero.headlineEnd}
+              </span>
             </h1>
-            <div className="mb-8 flex flex-wrap gap-3">
+            <div className="mb-6 flex flex-wrap justify-center gap-2.5 lg:mb-7">
               {t.hero.pills.map((pill, i) => (
-                <span key={i} className={`pill-dotted pill-stagger-${i + 1} rounded-full px-4 py-2 text-sm font-medium text-foreground`}>
+                <span key={i} className={`hero-pill-light pill-stagger-${i + 1} rounded-full px-3.5 py-1.5 text-xs font-medium lg:px-4 lg:py-2 lg:text-sm`}>
                   {pill}
                 </span>
               ))}
             </div>
-            <p className="mb-12 max-w-2xl text-lg leading-relaxed text-muted lg:text-xl">
+            <p className="mb-2 max-w-xl text-base leading-relaxed text-muted lg:max-w-2xl lg:text-lg">
               {t.hero.subtitle}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <p className="mb-9 max-w-lg text-sm leading-relaxed text-muted/80 lg:mb-10 lg:max-w-xl lg:text-base">
+              {t.hero.subtitleSecondary}
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 lg:gap-4">
               <a
                 href="#contacto"
-                className="btn-hero btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-8 py-4 text-sm font-semibold text-background"
+                className="btn-hero btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background lg:px-8 lg:py-4"
               >
                 <PhoneIcon />
                 {t.hero.letsTalk}
               </a>
               <a
-                href="mailto:jesusesteban12321@gmail.com"
-                className="btn-hero btn-outline btn-shine inline-flex items-center justify-center rounded-full border-2 border-foreground px-8 py-4 text-sm font-semibold text-foreground"
+                href="#experiencia"
+                className="btn-hero btn-outline btn-shine inline-flex items-center justify-center rounded-full border-2 border-foreground px-7 py-3.5 text-sm font-semibold text-foreground lg:px-8 lg:py-4"
               >
-                {t.hero.sendEmail}
+                {t.hero.exploreExperience}
               </a>
               <a
                 href="/jesus-villalta-cv.pdf"
                 download={locale === "es" ? "Jesús-Villalta-CV.pdf" : "Jesus-Villalta-CV.pdf"}
-                className="btn-hero inline-flex items-center justify-center gap-2 rounded-full border-2 border-border bg-card px-8 py-4 text-sm font-semibold text-foreground shadow-sm transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
+                className="btn-hero hidden items-center justify-center gap-2 rounded-full border-2 border-border bg-card px-7 py-3.5 text-sm font-semibold text-foreground shadow-sm transition-colors hover:border-foreground sm:inline-flex lg:px-8 lg:py-4"
               >
                 <DownloadIcon />
                 {t.hero.downloadCv}
@@ -350,7 +445,7 @@ export default function Home() {
 
         {/* About - tarjeta negra izquierda + 3 stats derecha (estilo Aman) */}
         <section id="sobre-mi" className="scroll-mt-24 border-t border-border bg-background px-6 py-24 lg:px-8" data-animate>
-          <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
+          <div className="mx-auto grid max-w-5xl items-start gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
             <div className="rounded-2xl bg-foreground p-8 text-background lg:p-10">
               <h2 className="mb-6 text-2xl font-bold tracking-tight lg:text-3xl">
                 {t.about.title}
@@ -365,14 +460,24 @@ export default function Home() {
                 {t.about.aboutMe}
               </a>
             </div>
-            <div className="grid gap-6 sm:grid-cols-3 sm:grid-rows-1">
-              {t.about.stats.map((stat) => (
-                <div key={stat.label} className="stat-card rounded-2xl border border-border bg-card p-6">
-                  <p className="stat-number mb-2 text-foreground">{stat.value}</p>
-                  <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted">
-                    {stat.label}
-                  </p>
-                  <p className="text-sm leading-relaxed text-muted">{stat.desc}</p>
+            <div className="flex flex-col gap-3" data-animate-stagger>
+              {t.about.stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={`stat-card stat-card--${i + 1}`}
+                  style={{ "--stat-pct": stat.bar, "--stat-delay": `${i * 0.1}s` } as React.CSSProperties}
+                >
+                  <div className="stat-ring-wrap" aria-hidden>
+                    <svg className="stat-ring" viewBox="0 0 72 72">
+                      <circle className="stat-ring-track" cx="36" cy="36" r="30" />
+                      <circle className="stat-ring-progress" cx="36" cy="36" r="30" />
+                    </svg>
+                    <span className="stat-ring-value">{stat.value}</span>
+                  </div>
+                  <div className="stat-card-body">
+                    <p className="stat-label">{stat.label}</p>
+                    <p className="stat-desc">{stat.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -439,19 +544,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills / Habilidades */}
+        {/* Skills / Habilidades — mismo encabezado que Experiencia */}
         <section id="habilidades" className="scroll-mt-24 border-t border-border bg-background px-6 py-24 lg:px-8" data-animate>
           <div className="mx-auto max-w-4xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-muted">
-              {t.skills.tag}
-            </p>
-            <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+              <span className="rounded-full border border-amber-200 bg-amber-50/80 px-4 py-1.5 text-sm font-medium text-amber-900">
+                {t.skills.tag}
+              </span>
+              <a href="#experiencia" className="flex items-center gap-1 text-sm font-medium text-foreground hover:underline">
+                {t.hero.exploreExperience}
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+            <h2 className="mb-16 text-3xl font-bold leading-tight tracking-tight text-foreground lg:text-4xl">
               {t.skills.title}
             </h2>
             <div className="grid gap-8 sm:grid-cols-2" data-animate-stagger>
               {SKILLS_KEYS.map((key) => (
-                <div key={key} className="skill-card rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+                <div key={key} className="skill-card rounded-2xl border border-border bg-card p-8 shadow-sm">
+                  <h3 className="skill-category-title mb-5 text-sm font-semibold uppercase tracking-wider text-foreground">
                     {t.skills.categories[key]}
                   </h3>
                   <ul className="flex flex-wrap gap-2">
