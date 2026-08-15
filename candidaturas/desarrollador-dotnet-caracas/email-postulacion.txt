@@ -1,0 +1,23 @@
+Asunto: Postulación — Desarrollador .NET (Caracas) | Jesús Villalta
+
+---
+
+Hola Melissa,
+
+Me interesa la vacante de Desarrollador .NET en Caracas. Soy Ingeniero en Sistemas (UNERG) con más de 5 años construyendo aplicaciones web y servicios empresariales: APIs REST, HTML, JavaScript, JSON, análisis de requisitos y trabajo en equipo en proyectos CRM/SaaS (Notario.org, Chatext, Invoice Nexusdevtech, TaxDay, Sigma).
+
+Quiero ser transparente: mi stack productivo es Laravel/PHP, Django/Python, Node.js, React y Vue — no tengo experiencia comprobable en C#, .NET Core ni Entity Framework. Sí tengo base sólida en el resto del perfil (APIs REST, HTML/JS/JSON, ORM en otros ecosistemas y más de 2 años de desarrollo). Si valoran un perfil con capacidad de aprendizaje rápido que aporte desde el día uno en arquitectura web y APIs mientras adopta .NET, me gustaría conversarlo.
+
+Sobre lo presencial en Caracas: estoy en Venezuela (Guárico) y puedo coordinar disponibilidad para trabajo presencial según lo que necesiten.
+
+Adjunto mi CV. Quedo atento.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador Fullstack / Software Developer
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

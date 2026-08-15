@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{NOMBRE}} — {{TITULO_CV}}</title>
+  <style>
+    :root {
+      --ink: #1c2434;
+      --muted: #4a5568;
+      --accent: #1a365d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.32;
+      font-size: 9.5pt;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm 14mm;
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .contact a { color: var(--accent); text-transform: none; text-decoration: none; }
+    h2 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      margin: 10px 0 5px;
+    }
+    .profile { text-align: justify; }
+    .job { margin-bottom: 8px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .job-company { font-weight: 700; font-size: 9.5pt; }
+    .job-loc { font-weight: 400; color: var(--muted); }
+    .job-dates { font-size: 8pt; color: var(--muted); white-space: nowrap; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 8.5pt; margin: 1px 0 2px; }
+    .job ul { margin-left: 14px; }
+    .job li { margin-bottom: 1px; text-align: justify; }
+    .stack {
+      font-size: 7.5pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .skills-block { margin-bottom: 2px; }
+    .skills-block strong { color: var(--accent); }
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .lang { margin-top: 4px; }
+    @media print {
+      .page { padding: 8mm 10mm; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>{{NOMBRE}}</h1>
+      <p class="title">{{TITULO_CV}}</p>
+      <p class="contact">
+        {{UBICACION}} |
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> |
+        {{TELEFONO}} |
+        <a href="{{LINKEDIN_URL}}">LinkedIn</a> |
+        <a href="{{GITHUB_URL}}">GitHub</a> |
+        <a href="{{PORTFOLIO_URL}}">Portfolio</a>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="profile">
+      {{PERFIL_2_3_FRASES_ALINEADAS_A_LA_VACANTE_SIN_INVENTAR}}.
+    </p>
+
+    <h2>Skills</h2>
+    <p class="skills-block"><strong>Backend:</strong> {{SKILLS_BACKEND_FILTRADAS}}</p>
+    <p class="skills-block"><strong>Frontend:</strong> {{SKILLS_FRONTEND_FILTRADAS}}</p>
+    <p class="skills-block"><strong>Datos &amp; APIs:</strong> {{SKILLS_DATOS}}</p>
+    <p class="skills-block"><strong>Infra &amp; herramientas:</strong> Cursor, Claude, {{SKILLS_INFRA}}</p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">{{EMPRESA}}</span>
+          <span class="job-loc"> · {{LUGAR_O_REMOTO}} — {{URL_PROD}}</span>
+        </div>
+        <span class="job-dates">{{FECHAS}}</span>
+      </div>
+      <div class="job-role">{{ROL}}</div>
+      <ul>
+        <li>{{LOGRO_1}}</li>
+        <li>{{LOGRO_2}}</li>
+        <li>{{LOGRO_3}}</li>
+      </ul>
+      <p class="stack">Tech: {{STACK_PROYECTO}}</p>
+    </div>
+
+    <h2>Educación</h2>
+    <div class="edu">
+      <div>
+        <strong>{{TITULO_ACADEMICO}}</strong><br />
+        {{UNIVERSIDAD}}
+      </div>
+      <div style="text-align:right; color: var(--muted); font-size: 8pt;">
+        {{AÑOS}}
+      </div>
+    </div>
+    <p class="lang"><strong>Idiomas:</strong> Español nativo · Inglés {{NIVEL_INGLES}}</p>
+  </article>
+</body>
+</html>

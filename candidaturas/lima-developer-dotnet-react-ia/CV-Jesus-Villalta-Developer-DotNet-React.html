@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Villalta — Developer .NET · React · IA</title>
+  <style>
+    :root {
+      --ink: #1c2434;
+      --muted: #4a5568;
+      --accent: #1a365d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.32;
+      font-size: 9pt;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      margin: 10px 0 5px;
+    }
+    .profile { text-align: justify; }
+    .job { margin-bottom: 7px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .job-company { font-weight: 700; font-size: 9.5pt; }
+    .job-loc { font-weight: 400; color: var(--muted); }
+    .job-dates { font-size: 8pt; color: var(--muted); white-space: nowrap; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 8.5pt; margin: 1px 0 2px; }
+    .job ul { margin-left: 14px; }
+    .job li { margin-bottom: 1px; text-align: justify; }
+    .stack {
+      font-size: 7.5pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .skills-block { margin-bottom: 2px; }
+    .skills-block strong { color: var(--accent); }
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .lang { margin-top: 4px; }
+    @media print {
+      .page { padding: 8mm 10mm; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Jesús Villalta</h1>
+      <p class="title">Developer — ASP.NET Core · React · TypeScript · APIs</p>
+      <p class="contact">
+        Guárico, Venezuela |
+        <a href="mailto:jesusesteban12321@gmail.com">jesusesteban12321@gmail.com</a> |
+        +58 412 821-05-69 |
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-villalta-gonzalez-83368722b/">LinkedIn</a> |
+        <a href="https://github.com/jesusestebn12321">GitHub</a> |
+        <a href="https://reacttuto-f578d.web.app/stack-b">Portfolio</a>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="profile">
+      Ingeniero de Sistemas con más de 5 años construyendo software fullstack con
+      <strong>ASP.NET Core</strong>, <strong>React</strong> / <strong>TypeScript</strong> y bases
+      <strong>MySQL</strong> / <strong>PostgreSQL</strong>. Aplico Clean Architecture, SOLID y buenas prácticas
+      (DRY, KISS) en APIs REST, frontends tipados y despliegues con Docker. Desarrollo asistido por IA
+      con <strong>Cursor</strong> y <strong>Claude</strong>. Plus: apps móviles con Flutter.
+    </p>
+
+    <h2>Skills</h2>
+    <p class="skills-block"><strong>Backend:</strong> C#, .NET 10, ASP.NET Core, Entity Framework Core, Web API / REST, JWT, SignalR, Clean Architecture, SOLID, Autofac, FluentValidation, Django, Python</p>
+    <p class="skills-block"><strong>Frontend:</strong> React.js, TypeScript, JavaScript, Angular, Vue.js, HTML/CSS, Tailwind, Bootstrap, Sass, Flutter, Dart</p>
+    <p class="skills-block"><strong>Datos:</strong> MySQL, PostgreSQL, SQL Server, Redis, ORM (EF Core / Django ORM), JSON, OAuth</p>
+    <p class="skills-block"><strong>Ingeniería &amp; calidad:</strong> Git/GitHub, pruebas unitarias/integración, refactorización, documentación técnica, SCRUM/ágil, Postman</p>
+    <p class="skills-block"><strong>Infra &amp; IA:</strong> Cursor, Claude, Docker, Docker Compose, Linux VPS, Nginx/Caddy, Jira</p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">pideloChevere</span>
+          <span class="job-loc"> · Freelancer (Remoto) — https://pidelo-chevere.food/</span>
+        </div>
+        <span class="job-dates">Enero 2026 – Julio 2026</span>
+      </div>
+      <div class="job-role">Desarrollador .NET / Full Stack</div>
+      <ul>
+        <li>POS SaaS multi-tenant para restaurantes (mesas, comandas, cocina, caja, menú público e impresión) con API .NET 10 y frontend tipado.</li>
+        <li>Backend Clean Architecture (ASP.NET Core + EF Core + JWT + SignalR + PostgreSQL 16); roles y flujos en tiempo real.</li>
+        <li>Frontend Angular 19 / TypeScript (signals, Tailwind): POS, cocina y caja con actualizaciones vía SignalR.</li>
+        <li>Docker Compose (API, web, PostgreSQL, print-agent); pruebas y refactorización orientada a mantenibilidad.</li>
+      </ul>
+      <p class="stack">Tech: C#, .NET 10, ASP.NET Core, EF Core, SignalR, JWT, TypeScript, PostgreSQL 16, Docker Compose</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Chatext (WhatsApp Lite)</span>
+          <span class="job-loc"> · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Marzo 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>SaaS multi-tenant con API REST, PostgreSQL, Redis/Bull y frontend React + TypeScript consumiendo JSON.</li>
+        <li>Auth JWT/API tokens, webhooks y despliegue Docker.</li>
+      </ul>
+      <p class="stack">Tech: Node.js, TypeScript, React, PostgreSQL, Redis, Docker, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">pymees Tienda Virtual</span>
+          <span class="job-loc"> · Freelancer (Remoto) — http://pymees.store/</span>
+        </div>
+        <span class="job-dates">Julio 2025 – Diciembre 2025</span>
+      </div>
+      <div class="job-role">Desarrollador .NET / Full Stack</div>
+      <ul>
+        <li>Fork y personalización de Smartstore (ASP.NET Core 10) para lanzar pymees en producción — branding, theming y admin.</li>
+        <li>Despliegue VPS con Docker Compose (ASP.NET Core + MySQL 8), reverse proxy y módulos de pagos/OAuth.</li>
+      </ul>
+      <p class="stack">Tech: C#, ASP.NET Core, EF Core, Razor, MySQL 8, Docker Compose, Autofac, FluentValidation</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Notario.org</span>
+          <span class="job-loc"> · España (Remoto)</span>
+        </div>
+        <span class="job-dates">Abril 2024 – Julio 2026</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>CRM/SaaS empresarial: APIs REST, facturación Stripe e integraciones; frontend Vue.js / React.js.</li>
+        <li>Mantenimiento y evolución de features en producción con Git y prácticas ágiles.</li>
+      </ul>
+      <p class="stack">Tech: APIs REST, React.js, Vue.js, JavaScript, MariaDB, Stripe, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Invoice Nexusdevtech</span>
+          <span class="job-loc"> · Freelancer (Remoto) — https://invoices.nexusdevtech.com/</span>
+        </div>
+        <span class="job-dates">Enero 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>App móvil Flutter (Dart) integrada a API REST: facturación, inventario y POS; Docker en producción.</li>
+      </ul>
+      <p class="stack">Tech: Flutter, Dart, APIs REST, Docker, MariaDB, Redis</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Sigma</span>
+          <span class="job-loc"> · Venezuela (Remoto)</span>
+        </div>
+        <span class="job-dates">Agosto 2021 – Julio 2022</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>Sistema de obras públicas y nóminas con Django/Python y PostgreSQL; pruebas unitarias/integración con mocks.</li>
+        <li>Reportes PDF y frontend Bootstrap; normalización SQL y documentación de flujos.</li>
+      </ul>
+      <p class="stack">Tech: Python, Django, PostgreSQL, Bootstrap, Git, pruebas automatizadas</p>
+    </div>
+
+    <h2>Educación</h2>
+    <div class="edu">
+      <div>
+        <strong>Ingeniero en Sistemas</strong><br />
+        Universidad Nacional Experimental Rómulo Gallegos (UNERG)
+      </div>
+      <div style="text-align:right; color: var(--muted); font-size: 8pt;">
+        2015 – 2020
+      </div>
+    </div>
+    <p class="lang"><strong>Idiomas:</strong> Español nativo · Inglés B2 (intermedio)</p>
+  </article>
+</body>
+</html>

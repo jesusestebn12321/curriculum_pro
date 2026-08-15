@@ -1,0 +1,15 @@
+{
+  "comment": "Fusionar estos scripts y dependencias en el package.json del proyecto del amigo",
+  "scripts": {
+    "db:init": "tsx scripts/candidaturas-db.ts init",
+    "db": "tsx scripts/candidaturas-db.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "mysql2": "^3.14.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5"
+  }
+}

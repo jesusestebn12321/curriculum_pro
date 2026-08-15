@@ -1,0 +1,25 @@
+Para: lilianacastaneda@seti.com.co
+
+Asunto: Postulación — Desarrollador Full Stack (Python + React) | Jesús Villalta
+
+---
+
+Hola Liliana,
+
+Me postulo a la vacante de Desarrollador Full Stack (Python + React) en SETI. Soy Ingeniero en Sistemas con más de 5 años construyendo productos de extremo a extremo en remoto: backends en Python/Django y stacks web modernos, frontends en React.js, APIs REST desacopladas, Docker y uso de AWS (S3) en producción.
+
+Encajo con lo que buscan: solidez en Django + React, arquitectura por servicios/API con bajo acoplamiento (SaaS multi-tenant, colas, contenedores) y cultura de buenas prácticas (capas claras, tests, código mantenible). Trabajo remoto no es un “extra” para mí: es mi modalidad habitual, con disciplina de horario y sincronización de equipo.
+
+Sobre FastAPI: mi experiencia productiva profunda está en Django y APIs REST; FastAPI es adyacente y lo adopto con rapidez dentro del stack del equipo. En CI/CD aporto despliegues Dockerizados y automatización de entrega; listo para alinear pipelines cloud-native con el estándar de SETI.
+
+Adjunto mi CV. Disponible de inmediato para contrato indefinido 100 % remoto. Quedo atento a una conversación.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador Full Stack — Python · Django · React
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Villalta — Senior Full Stack Developer Node.js + Vue.js</title>
+  <style>
+    :root {
+      --ink: #1c2434;
+      --muted: #4a5568;
+      --accent: #1a365d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.32;
+      font-size: 9pt;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      margin: 9px 0 5px;
+    }
+    .profile { text-align: justify; font-size: 8.5pt; }
+    .job { margin-bottom: 7px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .job-company { font-weight: 700; font-size: 9.5pt; }
+    .job-loc { font-weight: 400; color: var(--muted); }
+    .job-dates { font-size: 8pt; color: var(--muted); white-space: nowrap; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 8.5pt; margin: 1px 0 2px; }
+    .job-type { font-size: 8pt; color: var(--muted); font-weight: 400; }
+    .job ul { margin-left: 14px; }
+    .job li { margin-bottom: 1.5px; font-size: 8.5pt; text-align: justify; }
+    .stack {
+      font-size: 7.5pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .skills-block { margin-bottom: 2px; font-size: 8.5pt; }
+    .skills-block strong { color: var(--accent); }
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 8.5pt;
+    }
+    @media print {
+      .page { padding: 8mm 10mm; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Jesús Villalta</h1>
+      <p class="title">Senior Full Stack Developer — Node.js · Vue 3 · PostgreSQL</p>
+      <p class="contact">
+        Venezuela (remoto) |
+        <a href="mailto:jesusesteban12321@gmail.com">jesusesteban12321@gmail.com</a> |
+        +58 412 821-05-69 |
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-villalta-gonzalez-83368722b/">LinkedIn</a> |
+        <a href="https://reacttuto-f578d.web.app/">Portfolio</a>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="profile">
+      Ingeniero de Software con más de 5 años como Full Stack, construyendo productos web
+      de extremo a extremo con impacto en usuarios reales. Experiencia en
+      <strong>Node.js</strong>, <strong>Vue.js / Vue 3</strong>, <strong>PostgreSQL</strong>,
+      APIs REST e integración de servicios de terceros. No me limito a implementar tickets:
+      analizo problemas, propongo soluciones técnicas y colaboro con producto (UX/UI, PO, QA)
+      en la evolución continua del software, con buenas prácticas y calidad de código.
+    </p>
+
+    <h2>Skills</h2>
+    <p class="skills-block"><strong>Backend:</strong> Node.js, Express, JavaScript/TypeScript, Laravel (PHP), Django (Python), RESTful APIs, Webhooks, JWT / API tokens, Socket.IO, Bull</p>
+    <p class="skills-block"><strong>Frontend:</strong> Vue 3, Vue.js, Pinia, React.js, JavaScript/TypeScript, HTML, CSS, Tailwind, Bootstrap, Vite</p>
+    <p class="skills-block"><strong>Datos &amp; APIs:</strong> PostgreSQL, MySQL/MariaDB, Redis, SQL, Sequelize, consumo e integración de APIs de terceros, Stripe</p>
+    <p class="skills-block"><strong>Móvil &amp; infra:</strong> Flutter / Dart, Docker, Linux, Nginx, Git/GitHub, AWS, Postman</p>
+    <p class="skills-block"><strong>Herramientas:</strong> Cursor, Claude, Jira, Kanban, SCRUM, Pest, Jest, Sentry</p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Chatext</span>
+          <span class="job-loc"> — Plataforma SaaS de atención al cliente y automatización por WhatsApp · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Marzo 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>Backend en <strong>Node.js / TypeScript / Express</strong> con <strong>PostgreSQL</strong>, Redis y colas Bull: arquitectura multi-tenant, API REST, tiempo real (Socket.IO) y gestión concurrente de sesiones.</li>
+        <li>Integración de APIs y servicios de terceros (OpenAI, Azure Cognitive Services, Typebot, n8n, Gerencianet), webhooks, autenticación JWT/API tokens y feature flags.</li>
+        <li>Despliegue Docker (PostgreSQL, Redis, backend Node.js, Nginx con WebSocket) con migraciones, healthchecks y observabilidad (Sentry); frontend React y buenas prácticas de calidad (Jest).</li>
+      </ul>
+      <p class="stack">Techstack: Node.js, TypeScript, Express, Sequelize, PostgreSQL, Redis, Bull, Socket.IO, Docker, Nginx, Jest, Sentry, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Invoice Nexusdevtech</span>
+          <span class="job-loc"> — Plataforma SaaS de facturación, inventario y ventas · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Enero 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>SPA en <strong>Vue 3</strong> (Pinia, TypeScript, Tailwind, Vite) + API Laravel multiempresa: roles, Sanctum, portal de clientes y nuevas funcionalidades de producto (inventario, POS, catálogo público).</li>
+        <li>App móvil en Flutter integrada a la API REST; integración Stripe (checkout, webhooks) y despliegue Docker con colas Redis.</li>
+      </ul>
+      <p class="stack">Techstack: Vue 3, Pinia, TypeScript, Tailwind, Vite, Laravel, Flutter, Docker, Redis, Stripe, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Notario.org</span>
+          <span class="job-loc"> · España (Remoto)</span>
+        </div>
+        <span class="job-dates">Abril 2024 – Julio 2026</span>
+      </div>
+      <div class="job-role">Fullstack Engineer <span class="job-type">· Legal Tech / CRM</span></div>
+      <ul>
+        <li>Desarrollo integral de CRM empresarial (Laravel + Vue.js / React): flujos complejos, facturación Stripe e integraciones con APIs de terceros (Vintegrid, Diabolocom, Groq).</li>
+        <li>Participación en análisis de requisitos, diseño técnico y mejora continua del producto usado por miles de usuarios en producción remota.</li>
+      </ul>
+      <p class="stack">Techstack: Laravel, Vue.js, React.js, JavaScript, MariaDB, Stripe, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">TaxDay</span>
+          <span class="job-loc"> — SaaS de residencia fiscal / cumplimiento · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Diciembre 2025</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>Producto SaaS en Laravel 12: dominio multi-año, billing Stripe/webhooks, colas asíncronas, 2FA y tests Pest orientados a calidad y mantenibilidad.</li>
+      </ul>
+      <p class="stack">Techstack: Laravel 12, Livewire 3, Stripe, AWS S3, Pest, Tailwind, Vite, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Sigma</span>
+          <span class="job-loc"> · Venezuela (Remoto)</span>
+        </div>
+        <span class="job-dates">Agosto 2021 – Julio 2022</span>
+      </div>
+      <div class="job-role">Fullstack Engineer <span class="job-type">· GovTech / Nómina</span></div>
+      <ul>
+        <li>Sistemas de gestión (obras públicas y nóminas) con Django/Python y <strong>PostgreSQL</strong>: modelado SQL, APIs internas, reportes PDF y pruebas unitarias/integración.</li>
+      </ul>
+      <p class="stack">Techstack: Django, Python, PostgreSQL, Bootstrap, Git</p>
+    </div>
+
+    <h2>Educación</h2>
+    <div class="edu">
+      <div>
+        <strong>Ingeniero en Sistemas</strong><br />
+        Universidad Nacional Experimental Rómulo Gallegos (UNERG)
+      </div>
+      <div style="text-align:right; color: var(--muted); font-size: 8pt;">
+        2015 – 2020<br />
+        Español nativo · Inglés B2
+      </div>
+    </div>
+  </article>
+</body>
+</html>

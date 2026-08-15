@@ -1,0 +1,24 @@
+Asunto: Postulación — Desarrollador Semi Senior Fullstack (Angular / ASP.NET Core) | Jesús Villalta
+
+---
+
+Hola equipo FORWARTY,
+
+Me interesa la vacante de Desarrollador Semi Senior Fullstack. Soy Ingeniero en Sistemas con más de 5 años construyendo productos en remoto, con foco reciente en Angular, ASP.NET Core / C# y bases MySQL/PostgreSQL.
+
+En proyectos freelance recientes entregué:
+• pideloChevere — POS SaaS con API .NET 10 + Angular 19, SignalR y Clean Architecture.
+• Pymees — SaaS multi-tenant de tiendas virtuales (.NET 10 + Angular 19 + Flutter).
+• Experiencia productiva con MySQL/MariaDB en CRM/SaaS (Notario.org, Invoice Nexusdevtech).
+
+Me motiva aportar en un entorno dinámico como el de FORWARTY y construir productos de alto impacto en logística. Adjunto mi CV. Quedo atento por correo o WhatsApp.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador Fullstack / Software Developer
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/stack-b
+GitHub: jesusestebn12321

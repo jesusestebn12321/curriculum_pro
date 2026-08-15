@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Villalta — CV Frontend VTEX</title>
+  <style>
+    :root {
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --accent: #0d6e6e;
+      --bg: #f7f8fa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+      font-size: 10.5pt;
+    }
+    .page {
+      max-width: 800px;
+      margin: 24px auto;
+      background: #fff;
+      padding: 36px 40px;
+      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    }
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .role {
+      font-size: 12pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 9pt;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+      margin: 16px 0 8px;
+    }
+    .summary { color: var(--ink); }
+    .skills {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 4px 12px;
+      margin-top: 4px;
+    }
+    .skills dt { font-weight: 600; color: var(--muted); font-size: 9pt; }
+    .skills dd { font-size: 9.5pt; }
+    .job { margin-bottom: 12px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .job-head strong { font-size: 10.5pt; }
+    .job-meta { color: var(--muted); font-size: 9pt; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 9.5pt; }
+    .job ul { margin: 4px 0 0 16px; }
+    .job li { margin-bottom: 2px; }
+    .stack { font-size: 8.5pt; color: var(--muted); margin-top: 3px; font-style: italic; }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .note {
+      margin-top: 12px;
+      padding: 8px 10px;
+      background: #f0f7f7;
+      border-left: 3px solid var(--accent);
+      font-size: 9pt;
+      color: var(--muted);
+    }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; padding: 12mm 14mm; max-width: none; }
+      .no-print { display: none; }
+    }
+    .print-hint {
+      text-align: center;
+      margin: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <p class="print-hint no-print">Abrir en el navegador → Ctrl+P → Guardar como PDF (A4, sin márgenes extra).</p>
+  <article class="page">
+    <header>
+      <h1>Jesús Villalta Gonzalez</h1>
+      <p class="role">Frontend Developer · React / TypeScript · eCommerce</p>
+      <div class="contact">
+        <span>Guárico, Venezuela · Remoto</span>
+        <a href="mailto:jesusesteban12321@gmail.com">jesusesteban12321@gmail.com</a>
+        <span>+58 412 821 0569</span>
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-villalta-gonzalez-83368722b/">LinkedIn</a>
+        <a href="https://reacttuto-f578d.web.app/">Portfolio</a>
+        <a href="https://github.com/jesusestebn12321">GitHub</a>
+      </div>
+    </header>
+
+    <h2>Perfil</h2>
+    <p class="summary">
+      Desarrollador con 5+ años en aplicaciones web orientadas a producto. Experiencia sólida en
+      <strong>React.js</strong>, <strong>JavaScript ES6+</strong>, <strong>TypeScript</strong>, HTML5, CSS3 y Git.
+      He construido UIs reactivas, SPAs y flujos de conversión (catálogo, POS, checkout) en entornos remotos
+      full time. Busco aportar en storefronts eCommerce (Retail) y crecer de forma intensiva en
+      <strong>VTEX IO</strong>, performance web y SEO técnico. Uso diario de IA (Cursor, Claude, ChatGPT) en el ciclo de desarrollo.
+    </p>
+
+    <h2>Stack alineado al rol</h2>
+    <dl class="skills">
+      <dt>Core</dt>
+      <dd>React.js, JavaScript (ES6+), TypeScript, HTML5, CSS3 / SCSS, Tailwind</dd>
+      <dt>UI / SPA</dt>
+      <dd>Vue.js, componentes reactivos, Vite, diseño responsive, UX de producto</dd>
+      <dt>Calidad</dt>
+      <dd>Git / GitHub, optimización de rendimiento, refactor de frontend, APIs REST</dd>
+      <dt>eCommerce</dt>
+      <dd>Catálogos, POS, carrito, multimoneda, Stripe / checkout, SaaS multi-tenant</dd>
+      <dt>Herramientas</dt>
+      <dd>Cursor, Claude, ChatGPT, VS Code, Docker, Postman, SCRUM / Jira</dd>
+      <dt>En aprendizaje</dt>
+      <dd>VTEX IO (storefront, bloques, React en ecosistema VTEX) — alta motivación y curva rápida</dd>
+    </dl>
+
+    <h2>Experiencia relevante</h2>
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <strong>TaxDay · Sigma</strong> · Remoto
+          <div class="job-role">Fullstack / Frontend de producto</div>
+        </div>
+        <span class="job-meta">2020 – 2025</span>
+      </div>
+      <ul>
+        <li>UIs con Livewire/Volt/Flux y Bootstrap; dashboards, reportes PDF y flujos multi-paso.</li>
+        <li>Bases sólidas en HTML/CSS, componentes reutilizables y despliegue continuo.</li>
+      </ul>
+    </div>
+
+    <h2>Formación e idiomas</h2>
+    <div class="edu-row">
+      <div>
+        <strong>Ingeniería en Sistemas</strong> — UNERG<br />
+        <span class="job-meta">2015 – 2020</span>
+      </div>
+      <div class="job-meta" style="text-align:right">
+        Español nativo<br />
+        Inglés B2 (intermedio)
+      </div>
+    </div>
+
+    <p class="note">
+      <strong>Disponibilidad:</strong> 100 % remoto · Full time · Horario flexible.
+      Motivación alta para especializarme en VTEX IO, Core Web Vitals y SEO técnico dentro del proyecto Retail – Calzado.
+    </p>
+  </article>
+</body>
+</html>

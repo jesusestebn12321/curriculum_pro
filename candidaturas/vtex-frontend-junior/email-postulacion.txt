@@ -1,0 +1,24 @@
+Asunto: Postulación — Frontend Developer VTEX Junior | Jesús Villalta
+
+---
+
+Hola,
+
+Me interesa el puesto de Frontend Developer VTEX Junior en el proyecto de Retail – Calzado. Soy Ingeniero de Sistemas con más de 5 años construyendo interfaces web con React.js, JavaScript (ES6+), TypeScript, HTML5 y CSS3, y trabajo 100 % remoto con equipos en España y LATAM.
+
+Aunque mi trayectoria es fullstack, el foco reciente ha sido UI reactiva, SPAs y flujos de producto orientados a conversión (catálogos, POS, facturación, checkout con Stripe). Eso me permite aportar rápido en un storefront eCommerce mientras profundizo en VTEX IO — plataforma que me motiva especialmente por su modelo de componentes y el ecosistema retail.
+
+Cumplo los requisitos técnicos del anuncio (React, JS ES6+, HTML/CSS, TypeScript, Git) y tengo experiencia práctica en optimización de rendimiento y UX. Uso a diario Cursor, Claude y ChatGPT como parte de mi flujo de desarrollo.
+
+Adjunto mi CV orientado a frontend / eCommerce. Estoy disponible full time, con horario flexible, y puedo coordinar una entrevista cuando les venga bien.
+
+Gracias por su tiempo.
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Frontend / Fullstack Developer
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

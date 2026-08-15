@@ -1,0 +1,23 @@
+Asunto: Postulación — Developer .NET / React + IA | Jesús Villalta
+
+---
+
+Hola,
+
+Me interesa la vacante de Developer (.NET / Java + React + Oracle + IA). Soy Ingeniero en Sistemas con más de 5 años en fullstack: ASP.NET Core / C#, React + TypeScript, MySQL y PostgreSQL, APIs REST, Clean Architecture y buenas prácticas (SOLID, DRY, KISS).
+
+En proyectos recientes construí un POS SaaS con .NET 10 + EF Core + PostgreSQL (pideloChevere), personalicé e-commerce ASP.NET Core en producción con MySQL y Docker (pymees), y frontends React/TypeScript (Chatext, Notario.org). Trabajo con Git, pruebas, refactorización y documentación; sumo Docker y metodologías ágiles. Desarrollo día a día con Cursor y Claude.
+
+No tengo experiencia productiva en Spring Boot ni Oracle; mi foco backend es ASP.NET Core y datos MySQL/PostgreSQL. Si buscan alguien que aporte desde el día uno en .NET + React + TypeScript e IA en el flujo de desarrollo, me encantaría conversar.
+
+Adjunto mi CV. Quedo atento por WhatsApp o correo.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador Fullstack / Software Developer
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/stack-b
+GitHub: jesusestebn12321

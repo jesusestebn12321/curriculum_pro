@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Villalta — Desarrollador FullStack Django</title>
+  <style>
+    :root {
+      --ink: #1c2434;
+      --muted: #4a5568;
+      --accent: #1a365d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.32;
+      font-size: 9pt;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      margin: 9px 0 5px;
+    }
+    .profile { text-align: justify; font-size: 8.5pt; }
+    .job { margin-bottom: 7px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .job-company { font-weight: 700; font-size: 9.5pt; }
+    .job-loc { font-weight: 400; color: var(--muted); }
+    .job-dates { font-size: 8pt; color: var(--muted); white-space: nowrap; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 8.5pt; margin: 1px 0 2px; }
+    .job-type { font-size: 8pt; color: var(--muted); font-weight: 400; }
+    .job ul { margin-left: 14px; }
+    .job li { margin-bottom: 1.5px; font-size: 8.5pt; text-align: justify; }
+    .stack {
+      font-size: 7.5pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .skills-block { margin-bottom: 2px; font-size: 8.5pt; }
+    .skills-block strong { color: var(--accent); }
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 8.5pt;
+    }
+    @media print {
+      .page { padding: 8mm 10mm; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Jesús Villalta</h1>
+      <p class="title">Software Developer &amp; Fullstack Engineer — Django · Python · PostgreSQL</p>
+      <p class="contact">
+        Venezuela |
+        <a href="mailto:jesusesteban12321@gmail.com">jesusesteban12321@gmail.com</a> |
+        +58 412 821-05-69 |
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-villalta-gonzalez-83368722b/">LinkedIn</a>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="profile">
+      Ingeniero de Software con más de 5 años de experiencia diseñando y escalando sistemas web
+      para mercados en Europa y América Latina. Especialista en <strong>Python/Django</strong>,
+      <strong>PHP/Laravel</strong> y ecosistemas de <strong>React.js / Vue.js</strong>, con capacidad
+      para liderar el ciclo de vida completo de desarrollo, desde la conceptualización hasta la
+      implementación y mantenimiento. Enfocado en la automatización de procesos de negocio,
+      optimización de sistemas complejos, APIs REST, bases de datos relacionales
+      (<strong>PostgreSQL</strong>, MariaDB), colas con <strong>Redis</strong>, despliegue con
+      <strong>Docker</strong> y mejora de la experiencia de usuario (UX).
+    </p>
+
+    <h2>Skills</h2>
+    <p class="skills-block"><strong>Backend:</strong> Python, Django, Laravel (PHP), Node.js, JavaScript/TypeScript, Express, RESTful APIs, SOAP APIs, Webhooks, Axios, Selenium</p>
+    <p class="skills-block"><strong>Datos &amp; infra:</strong> PostgreSQL, MySQL, MariaDB, SQLite, SQL, Redis, Docker, Git/GitHub, Linux, Nginx, AWS</p>
+    <p class="skills-block"><strong>Frontend &amp; móvil:</strong> React.js, Vue.js, JavaScript/TypeScript, HTML, CSS, SCSS/SASS, Tailwind, Bootstrap, Flutter, jQuery</p>
+    <p class="skills-block"><strong>Herramientas:</strong> Cursor, Claude, Postman, Jira, SCRUM, Trello, VSCode, Stripe, OpenAI/Groq, aaPanel</p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Notario.org</span>
+          <span class="job-loc"> · España (Remoto)</span>
+        </div>
+        <span class="job-dates">Abril 2024 – Julio 2026</span>
+      </div>
+      <div class="job-role">Fullstack Engineer <span class="job-type">· Legal Tech / CRM</span></div>
+      <ul>
+        <li><strong>Arquitectura de alto rendimiento:</strong> desarrollo integral de un CRM empresarial mediante Laravel y MariaDB, optimizando la gestión de flujos de trabajo complejos con componentes reactivos en Vue.js y React.js.</li>
+        <li><strong>Automatización financiera:</strong> sistema de facturación automatizada y suscripciones con Stripe, centralizando el control de pagos y mejorando la precisión contable.</li>
+        <li><strong>Integraciones inteligentes:</strong> API de Groq para analítica avanzada mediante IA, permitiendo extracción de datos y métricas clave en lenguaje natural.</li>
+        <li><strong>Gestión de ecosistemas:</strong> centralización de operaciones con APIs de terceros (Vintegrid para certificados digitales y Diabolocom para telefonía IP).</li>
+        <li><strong>Infraestructura:</strong> administración y despliegue de servidores Linux bajo aaPanel, garantizando alta disponibilidad y seguridad en entornos de producción.</li>
+      </ul>
+      <p class="stack">Techstack: Laravel, Livewire, Vue.js, React.js, JavaScript, MariaDB, aaPanel, Stripe, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Chatext</span>
+          <span class="job-loc"> — Plataforma SaaS de atención al cliente y automatización por WhatsApp · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Marzo 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>Diseñé y evolucioné una arquitectura multi-tenant (empresas, planes, colas y usuarios) con API REST, tiempo real vía Socket.IO y gestión concurrente de múltiples sesiones de WhatsApp mediante Baileys.</li>
+        <li>Integré autenticación M2M multi-etapa (trusted apps, JWT, API tokens y sesiones de panel), rotación segura de API keys, feature flags y módulos de facturación y suscripción.</li>
+        <li>Implementé automatización avanzada con Flow Builder visual, webhooks, campañas masivas y conectores externos (Typebot, n8n, OpenAI y síntesis de voz con Azure Cognitive Services), incluyendo procesamiento multimedia con FFmpeg.</li>
+        <li>Orquesté procesos asíncronos con Bull y Redis (envío de mensajes, campañas, programación y monitoreo), con rate limiting, reintentos y observabilidad mediante Sentry.</li>
+        <li>Desplegué el stack completo en Docker (PostgreSQL, Redis, backend Node.js, Nginx como balanceador con soporte WebSocket y frontend React), con migraciones automáticas, healthchecks y script de despliegue en VPS; integré pagos PIX vía Gerencianet.</li>
+      </ul>
+      <p class="stack">Techstack: Node.js, TypeScript, Express, Sequelize, PostgreSQL, Redis, Bull, Socket.IO, Baileys, Docker, Nginx, OpenAI, Azure Speech, Puppeteer, Jest, Sentry, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Invoice Nexusdevtech</span>
+          <span class="job-loc"> — Plataforma SaaS de facturación, inventario y ventas · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Enero 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>Diseñé y extendí una arquitectura multiempresa (Laravel + Vue 3 SPA) con aislamiento por tenant, roles granulares (Bouncer), autenticación Sanctum y portal de clientes.</li>
+        <li>Desarrollé app móvil en Flutter (Dart) integrada con la API: facturación, inventario, ventas y operación en campo.</li>
+        <li>Implementé control de inventario transaccional vinculado al ciclo de facturación (ajuste de stock al cobro, reversión y validación en presupuestos) y módulo POS de ventas rápidas con carrito, multimoneda y emisión fiscal en un solo flujo.</li>
+        <li>Desarrollé catálogo público configurable (plantillas, temas, geolocalización y redes) con generación de PDF de códigos QR, más landing institucional bilingüe con planes de suscripción y registro vía Stripe (checkout, webhooks y periodos de prueba).</li>
+        <li>Automatizé el despliegue en Docker (build multi-etapa, MariaDB/SQLite, healthchecks, inyección de entorno, HTTPS detrás de proxy) e integré Gotenberg para PDFs, almacenamiento S3/Dropbox, colas, backups Spatie y suite de tests con Pest.</li>
+      </ul>
+      <p class="stack">Techstack: Laravel, PHP 8.5, Vue 3, Flutter, Dart, Pinia, TypeScript, Tailwind CSS v4, MariaDB/SQLite, Docker Compose, Redis, Sanctum, Bouncer, Stripe, Gotenberg, Vite, Pest, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">TaxDay</span>
+          <span class="job-loc"> — SaaS de residencia fiscal / cumplimiento · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Diciembre 2025</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>Reimplementación en Laravel 12 con arquitectura de dominio, UI Livewire 3 / Volt / Flux y modelo multi-año con varias residencias por ejercicio fiscal.</li>
+        <li>Motor de scoring de riesgo auditable: calendario 365 días, cobertura de estancias, umbrales por país e informes PDF.</li>
+        <li>Stripe y AWS S3: suscripciones con webhooks, almacenamiento privado y sincronización de planes; asistente IA (Groq) con datos fiscales del usuario, colas asíncronas y exportaciones GDPR en background.</li>
+        <li>2FA, roles Spatie, impersonación trazable y tests Pest en billing, storage, IA y exportaciones.</li>
+      </ul>
+      <p class="stack">Techstack: PHP 8.3, Laravel 12, Livewire 3, Volt, Flux UI, Fortify, Spatie Permission, Stripe, AWS S3, Groq API, DomPDF, Tailwind CSS 4, Vite, Pest, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Sigma</span>
+          <span class="job-loc"> · Venezuela (Remoto)</span>
+        </div>
+        <span class="job-dates">Agosto 2021 – Julio 2022</span>
+      </div>
+      <div class="job-role">Fullstack Engineer <span class="job-type">· GovTech / Nómina</span></div>
+      <ul>
+        <li>Desarrollé un sistema integral para la gestión de obras públicas y el procesamiento de nóminas utilizando Django y Python.</li>
+        <li>Construí el frontend con Bootstrap y componentes personalizados para crear una interfaz intuitiva.</li>
+        <li>Automatizé la generación de documentos PDF mediante plantillas reutilizables y paquetes internos de Python.</li>
+        <li>Estructuré y normalicé las bases de datos (PostgreSQL) para garantizar la integridad y la eficiencia de los datos en consultas complejas.</li>
+        <li>Implementé pruebas unitarias y de integración con mocks, mejorando la mantenibilidad y la fiabilidad del sistema.</li>
+      </ul>
+      <p class="stack">Techstack: Django, Python, Bootstrap, PostgreSQL, jQuery, Mock, Git</p>
+    </div>
+
+    <h2>Educación</h2>
+    <div class="edu">
+      <div>
+        <strong>Ingeniero en Sistemas</strong><br />
+        Universidad Nacional Experimental Rómulo Gallegos (UNERG)
+      </div>
+      <div style="text-align:right; color: var(--muted); font-size: 8pt;">
+        2015 – 2020<br />
+        Español nativo · Inglés A2
+      </div>
+    </div>
+  </article>
+</body>
+</html>

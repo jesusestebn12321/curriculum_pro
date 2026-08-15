@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test OpenAI Key</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3d8bfd;
+      --ok: #3dd68c;
+      --err: #f07178;
+      --border: #2a3548;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #1e3a5f 0%, var(--bg) 55%);
+      color: var(--text);
+      padding: 2rem 1rem;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+    p { margin: 0 0 1.25rem; color: var(--muted); font-size: 0.95rem; }
+    label { display: block; font-size: 0.85rem; margin-bottom: 0.35rem; color: var(--muted); }
+    input, select {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f1621;
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.55; cursor: wait; }
+    button.secondary { background: #2a3548; }
+    pre {
+      margin: 0;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #0b1018;
+      border: 1px solid var(--border);
+      overflow: auto;
+      max-height: 420px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+    .status { margin-bottom: 0.75rem; font-weight: 600; }
+    .status.ok { color: var(--ok); }
+    .status.err { color: var(--err); }
+    .hint { font-size: 0.8rem; color: var(--muted); margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Test OpenAI API Key</h1>
+    <p>Activa el VPN (país soportado) y prueba la key. No subas este archivo a un repo público con la key pegada.</p>
+
+    <label for="key">API Key</label>
+    <input id="key" type="password" placeholder="sk-..." autocomplete="off" />
+
+    <label for="model">Modelo (para chat)</label>
+    <select id="model">
+      <option value="gpt-4o-mini" selected>gpt-4o-mini</option>
+      <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+      <option value="gpt-4o">gpt-4o</option>
+      <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+    </select>
+
+    <div class="row">
+      <button id="btnModels" type="button">1. Probar key (listar modelos)</button>
+      <button id="btnChat" class="secondary" type="button">2. Probar chat</button>
+    </div>
+
+    <div id="status" class="status"></div>
+    <pre id="out">Resultado aquí…</pre>
+    <p class="hint">
+      200 = OK · 401 = key inválida · 403 unsupported_country = región bloqueada (VPN mal) ·
+      text-davinci-003 ya no existe.
+    </p>
+  </main>
+
+  <script>
+    const keyEl = document.getElementById("key");
+    const modelEl = document.getElementById("model");
+    const out = document.getElementById("out");
+    const status = document.getElementById("status");
+    const btnModels = document.getElementById("btnModels");
+    const btnChat = document.getElementById("btnChat");
+
+    function getKey() {
+      const key = keyEl.value.trim();
+      if (!key) throw new Error("Pega tu API key primero.");
+      return key;
+    }
+
+    function setBusy(busy) {
+      btnModels.disabled = busy;
+      btnChat.disabled = busy;
+    }
+
+    function showResult(httpStatus, data) {
+      const ok = httpStatus >= 200 && httpStatus < 300;
+      status.className = "status " + (ok ? "ok" : "err");
+      status.textContent = ok
+        ? "HTTP " + httpStatus + " — OK"
+        : "HTTP " + httpStatus + " — Error";
+      out.textContent = typeof data === "string" ? data : JSON.stringify(data, null, 2);
+    }
+
+    async function call(url, options) {
+      setBusy(true);
+      status.className = "status";
+      status.textContent = "Consultando…";
+      out.textContent = "";
+      try {
+        const res = await fetch(url, options);
+        let data;
+        try {
+          data = await res.json();
+        } catch {
+          data = await res.text();
+        }
+        showResult(res.status, data);
+      } catch (err) {
+        status.className = "status err";
+        status.textContent = "Fallo de red / CORS";
+        out.textContent = String(err);
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    btnModels.addEventListener("click", async () => {
+      try {
+        const key = getKey();
+        await call("https://api.openai.com/v1/models", {
+          headers: { Authorization: "Bearer " + key },
+        });
+      } catch (err) {
+        status.className = "status err";
+        status.textContent = String(err.message || err);
+      }
+    });
+
+    btnChat.addEventListener("click", async () => {
+      try {
+        const key = getKey();
+        await call("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            Authorization: "Bearer " + key,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: modelEl.value,
+            messages: [{ role: "user", content: "Responde solo: ok" }],
+            max_tokens: 10,
+          }),
+        });
+      } catch (err) {
+        status.className = "status err";
+        status.textContent = String(err.message || err);
+      }
+    });
+  </script>
+</body>
+</html>

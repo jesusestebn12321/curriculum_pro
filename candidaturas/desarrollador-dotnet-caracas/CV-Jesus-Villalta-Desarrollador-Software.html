@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Villalta — Desarrollador de Software</title>
+  <style>
+    :root {
+      --ink: #1c2434;
+      --muted: #4a5568;
+      --line: #cfd6e0;
+      --accent: #1a365d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.35;
+      font-size: 9.5pt;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm 14mm;
+    }
+    h1 {
+      font-size: 17pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 10.5pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 5px;
+      font-size: 8.5pt;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 9.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      margin: 11px 0 6px;
+    }
+    .profile { text-align: justify; }
+    .job { margin-bottom: 8px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .job-company { font-weight: 700; font-size: 10pt; }
+    .job-loc { font-weight: 400; color: var(--muted); }
+    .job-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+    .job-role { font-weight: 600; color: var(--accent); font-size: 9pt; margin: 1px 0 2px; }
+    .job ul { margin-left: 15px; }
+    .job li { margin-bottom: 1px; }
+    .stack {
+      font-size: 8pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .skills-block { margin-bottom: 3px; }
+    .skills-block strong { color: var(--accent); }
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    @media print {
+      .page { padding: 8mm 10mm; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Jesús Villalta</h1>
+      <p class="title">Desarrollador de Software — APIs REST · JavaScript · HTML · JSON</p>
+      <p class="contact">
+        Venezuela |
+        <a href="mailto:jesusesteban12321@gmail.com">jesusesteban12321@gmail.com</a> |
+        +58 412 821-05-69 |
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-villalta-gonzalez-83368722b/">LinkedIn</a> |
+        <a href="https://reacttuto-f578d.web.app/">Portfolio</a>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="profile">
+      Ingeniero de Sistemas con más de 5 años desarrollando software empresarial:
+      diseño, construcción y mantenimiento de aplicaciones web y servicios con
+      <strong>APIs REST</strong>, <strong>HTML</strong>, <strong>JavaScript</strong> y
+      <strong>JSON</strong>. Experiencia en análisis de requisitos, resolución de
+      problemas y trabajo en equipo en proyectos CRM/SaaS, con entrega de soluciones
+      mantenibles y orientadas a negocio.
+    </p>
+
+    <h2>Skills</h2>
+    <p class="skills-block"><strong>Web &amp; APIs:</strong> APIs REST, HTML, JavaScript/TypeScript, JSON, Vue.js, React.js, CSS, Bootstrap, Tailwind</p>
+    <p class="skills-block"><strong>Backend &amp; datos:</strong> Laravel (PHP), Python/Django, Node.js, SQL, MySQL/MariaDB, PostgreSQL, ORM (Eloquent / Django ORM), autenticación JWT</p>
+    <p class="skills-block"><strong>Ingeniería:</strong> análisis de requisitos, diseño de servicios, mantenimiento de aplicaciones, trabajo en equipo, SCRUM</p>
+    <p class="skills-block"><strong>Herramientas:</strong> Cursor, Claude, Git/GitHub, Docker, Postman, Linux, Jira, AWS, Stripe</p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Notario.org</span>
+          <span class="job-loc"> · España (Remoto)</span>
+        </div>
+        <span class="job-dates">Abril 2024 – Julio 2026</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>Diseño y mantenimiento de CRM empresarial: flujos complejos, APIs, facturación Stripe e integraciones.</li>
+        <li>Frontend con Vue.js / React.js (HTML, JavaScript, JSON) e infraestructura Linux en producción.</li>
+      </ul>
+      <p class="stack">Tech: Laravel, Vue.js, React.js, JavaScript, JSON, MariaDB, Stripe, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Chatext (WhatsApp Lite)</span>
+          <span class="job-loc"> · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Marzo 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>SaaS multi-tenant con API REST, PostgreSQL, Redis/Bull y despliegue Docker.</li>
+        <li>Auth JWT/API tokens, webhooks y frontend React consumiendo servicios JSON.</li>
+      </ul>
+      <p class="stack">Tech: Node.js, TypeScript, PostgreSQL, Redis, Docker, React, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Invoice Nexusdevtech</span>
+          <span class="job-loc"> · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Enero 2026</span>
+      </div>
+      <div class="job-role">Fullstack Developer</div>
+      <ul>
+        <li>SaaS de facturación/inventario multiempresa; API REST consumida por app móvil Flutter.</li>
+        <li>Docker multi-etapa, tests y operación en producción (storage, backups, POS).</li>
+      </ul>
+      <p class="stack">Tech: Laravel, Vue 3, Flutter, Docker, Redis, MariaDB, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">TaxDay</span>
+          <span class="job-loc"> · Freelancer (Remoto)</span>
+        </div>
+        <span class="job-dates">Diciembre 2025</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>SaaS fiscal con APIs, webhooks Stripe, almacenamiento S3 y exportaciones en background.</li>
+      </ul>
+      <p class="stack">Tech: Laravel, Stripe, AWS S3, colas, Git</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-company">Sigma</span>
+          <span class="job-loc"> · Venezuela (Remoto)</span>
+        </div>
+        <span class="job-dates">Agosto 2021 – Julio 2022</span>
+      </div>
+      <div class="job-role">Fullstack Engineer</div>
+      <ul>
+        <li>Sistema de obras públicas y nóminas: APIs internas, reportes PDF y frontend Bootstrap.</li>
+        <li>Normalización SQL y pruebas unitarias/integración con mocks.</li>
+      </ul>
+      <p class="stack">Tech: Python, Django, PostgreSQL, SQL, HTML, JavaScript, Bootstrap, Git</p>
+    </div>
+
+    <h2>Educación</h2>
+    <div class="edu">
+      <div>
+        <strong>Ingeniero en Sistemas</strong><br />
+        Universidad Nacional Experimental Rómulo Gallegos (UNERG)
+      </div>
+      <div style="text-align:right; color: var(--muted); font-size: 8.5pt;">
+        2015 – 2020<br />
+        Español nativo · Inglés B2
+      </div>
+    </div>
+  </article>
+</body>
+</html>

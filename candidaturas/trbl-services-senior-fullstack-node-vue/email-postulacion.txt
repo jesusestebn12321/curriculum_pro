@@ -1,0 +1,24 @@
+Asunto: Candidatura — Senior Full Stack Developer (Node.js + Vue.js) | Jesús Villalta
+
+---
+
+Hola equipo de Talent / TRBL Services,
+
+Me postulo a la vacante de Senior Full Stack Developer (Node.js + Vue.js) para el equipo CORE. Soy Ingeniero en Sistemas con más de 5 años construyendo productos web a medida en remoto, con foco en análisis de problemas, propuesta de soluciones y evolución continua del producto junto a equipos de Producto.
+
+Encaje técnico con lo que buscáis:
+• Node.js / TypeScript / Express y PostgreSQL en producción (p. ej. plataforma SaaS multi-tenant Chatext: APIs REST, Redis/colas, integraciones de terceros y despliegue Docker).
+• Vue.js / Vue 3 en SPAs de producto (Invoice Nexusdevtech) y CRM con Vue/React (Notario.org), más consumo e integración de APIs.
+• Buenas prácticas, calidad de código y trabajo con Kanban/SCRUM; me interesa aportar visión de producto, no solo cerrar tickets.
+
+Adjunto mi CV. Disponible de inmediato en 100 % remoto. Quedo atento a una conversación.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Senior Full Stack Developer — Node.js / Vue 3
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

@@ -1,0 +1,21 @@
+Asunto: Postulación — Desarrollador FullStack (Django / Python) | Jesús Villalta
+
+---
+
+Hola equipo de Talento Humano / WeAre Dev,
+
+Me postulo a la vacante de Desarrollador/a FullStack. Soy Ingeniero en Sistemas con más de 5 años construyendo software en remoto, con experiencia productiva en Django/Python y PostgreSQL (Sigma), además de Docker, Redis, colas asíncronas, Git y APIs REST en proyectos CRM/SaaS (Notario.org, Chatext, Invoice Nexusdevtech).
+
+Valoro lo que destacan: arquitectura clara, procesos serios y estabilidad. Encajo en el núcleo del stack (Django, Python, PostgreSQL, Git, Docker, Redis). Sobre Ionic, Angular y Capacitor: no tengo experiencia productiva profunda ahí; sí frontend sólido (React/Vue) y app móvil con Flutter consumiendo API. Celery/RabbitMQ/Elasticsearch y Azure DevOps no los he usado en producción, pero trabajo a diario con colas (Redis/Bull), contenedores y flujos Git — puedo adoptarlos con rapidez.
+
+Adjunto mi CV. Disponible de inmediato. También pueden escribirme al +58 412 821 0569.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador FullStack — Django · Python · PostgreSQL
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

@@ -1,0 +1,22 @@
+Para: florencia.cuello@outsourcearg.com
+Asunto: Postulación — Senior Frontend Engineer (Remoto LatAm) | Jesús Villalta
+
+---
+
+Hola Florencia,
+
+Me interesa la vacante de Senior Frontend Engineer (remoto LatAm, proyecto de 3 meses). Soy Ingeniero en Sistemas con más de 5 años en aplicaciones web en producción, con foco fuerte en React, Next.js (App Router), TypeScript y arquitectura frontend.
+
+En mi portfolio en producción trabajo con React 19 y Next.js 16; además he desarrollado SPAs y UIs en React/TypeScript para CRM y SaaS (Notario.org, Chatext, Invoice Nexusdevtech), consumiendo APIs REST y colaborando en remoto con equipos de España y LATAM. Disponible full time y con flexibilidad para alinearme a franjas CST/PST. Mi inglés técnico escrito es sólido; el oral lo manejo a nivel intermedio (A2/B2) y estoy cómodo en entornos bilingües de documentación y código.
+
+Adjunto mi CV. Completo también el formulario de postulación. Quedo atento a los siguientes pasos.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Senior Frontend / Fullstack Engineer
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321

@@ -1,0 +1,23 @@
+Asunto: Postulación — Desarrollador Odoo | Jesús Villalta
+
+---
+
+Hola,
+
+Me interesa la vacante de Desarrollador Odoo. Soy Ingeniero en Sistemas con más de 5 años construyendo sistemas de negocio (CRM, facturación, inventario y automatización) en modalidad remota.
+
+Cumplo el núcleo técnico del aviso fuera del framework: Python (Django), PostgreSQL, APIs REST, Git y SCRUM. He integrado sistemas vía REST/SOAP/webhooks, modelado bases relacionales y entregado productos tipo ERP (facturación, roles, inventario, suscripciones).
+
+No cuento aún con experiencia productiva en Odoo Framework ni en vistas XML de Odoo; sí con Python, PostgreSQL e integraciones de negocio equivalentes, y estoy dispuesto a incorporar el framework con rapidez.
+
+Adjunto mi CV. Quedo atento a una entrevista y disponible de inmediato en modalidad remota.
+
+Saludos cordiales,
+
+Jesús Villalta Gonzalez
+Desarrollador Full Stack / Backend
++58 412 821 0569
+jesusesteban12321@gmail.com
+LinkedIn: https://www.linkedin.com/in/jesús-villalta-gonzalez-83368722b/
+Portfolio: https://reacttuto-f578d.web.app/
+GitHub: jesusestebn12321
